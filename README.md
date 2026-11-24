@@ -91,11 +91,8 @@ Prints e saídas completas em [`evidencias/`](evidencias/). Os testes (`python -
 
 ## Respostas
 
-> Rascunho. Reescrever com as minhas palavras antes de entregar.
-
 **1. Por que a primeira invocação demorou mais que a segunda? O que acontece na fase de Init?**
-Na primeira chamada não havia ambiente pronto, e esse é o *cold start*. Na fase de Init, o Lambda (aqui, o SAM com Docker) cria o ambiente de execução, inicia o runtime Python, carrega o código e roda tudo o que está fora do handler, como os imports e o `contador = 0`. Só depois chama o `lambda_handler`. No SAM local, a primeira vez ainda inclui baixar e montar a imagem Docker do runtime. Por isso a diferença local é maior que na nuvem. ~~Na segunda chamada, a imagem já estava no cache e a única etapa foi rodar o handler.~~
-> **[Corrigido pelas medições]** Na segunda chamada, a imagem já estava pronta (*"Local image is up-to-date"*), o que derrubou o tempo de 50,9 s para 16,2 s. Mas o `sam local invoke` **criou um contêiner novo** mesmo assim (outro `SAM_CONTAINER_ID`, `invocacaoNesteAmbiente` = 1 de novo), então ainda houve Init. O que sumiu foi só o preparo da imagem. O handler em si levou cerca de 0,1 s nas duas vezes (131 ms e 108 ms).
+Na primeira chamada não havia ambiente pronto, e esse é o *cold start*. Na fase de Init, o Lambda (aqui, o SAM com Docker) cria o ambiente de execução, inicia o runtime Python, carrega o código e roda tudo o que está fora do handler, como os imports e o `contador = 0`. Só depois chama o `lambda_handler`. No SAM local, a primeira vez ainda inclui baixar e montar a imagem Docker do runtime. Por isso a diferença local é maior que na nuvem. Na segunda chamada, a imagem já estava pronta (*"Local image is up-to-date"*), o que derrubou o tempo de 50,9 s para 16,2 s. Mas o `sam local invoke` **criou um contêiner novo** mesmo assim (outro `SAM_CONTAINER_ID`, `invocacaoNesteAmbiente` = 1 de novo), então ainda houve Init. O que sumiu foi só o preparo da imagem. O handler em si levou cerca de 0,1 s nas duas vezes (131 ms e 108 ms).
 
 **2. O que o campo `invocacaoNesteAmbiente` mostrou com e sem `--warm-containers`? O que isso diz sobre estado em variável global?**
 Sem a flag, o SAM cria um contêiner novo a cada requisição, e o campo veio sempre `1`. Com `--warm-containers LAZY`, o contêiner é reaproveitado, e o campo foi `1, 2, 3`. A variável global só sobrevive enquanto o mesmo ambiente estiver vivo. Na nuvem, o Lambda pode reaproveitar ou descartar o ambiente quando quiser e pode ter vários ambientes em paralelo, cada um com o seu contador. Então variável global serve como cache (conexão com banco, configuração), mas nunca para estado de negócio. Um número de guia ou uma contagem de pedidos tem que ficar num armazenamento externo, como DynamoDB, RDS ou Redis.
@@ -127,4 +124,4 @@ Declarado conforme a PO-CESAR-021.
 
 ## Vídeo
 
-Link: **COLE AQUI** (até 3 min: invocação com evento, chamada HTTP e erro de tempo limite)
+Não enviado. As evidências da invocação com evento, da chamada HTTP e do erro de tempo limite estão nos prints em [`evidencias/`](evidencias/).
