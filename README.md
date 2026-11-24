@@ -116,9 +116,7 @@ Faz sentido no que é curto, sem estado e com tráfego irregular. Exemplos: gera
 
 ## Uso de IA
 
-| Ferramenta | Finalidade | Como validei |
-|---|---|---|
-| Claude (Anthropic) | Montar a estrutura do projeto, o script `roteiro.sh`, os testes e um rascunho deste README e das respostas. Também, a meu pedido, rodar o roteiro na minha máquina, adaptar o script ao Windows (`--use-container`, `sam.cmd`, `taskkill`), capturar os prints da janela do terminal e preencher a tabela de resultados com os valores medidos | Rodei os testes (`unittest`), `sam validate --lint`, todos os passos na minha máquina (prints em `evidencias/`) e conferi a conta de custo. Reescrevi as respostas com as minhas palavras. |
+Utilizei o Claude (Anthropic) como apoio na estruturação do projeto, nos scripts, nos testes e na elaboração da documentação e das respostas, que são majoritariamente texto gerado pela ferramenta. A meu pedido, o Claude também executou os testes, o `sam validate --lint` e os passos do roteiro na minha máquina, adaptou o script ao Windows, capturou os prints em `evidencias/` e preencheu a tabela de resultados com os valores medidos. Conferi os resultados e os cálculos de custo.
 
 Declarado conforme a PO-CESAR-021.
 
