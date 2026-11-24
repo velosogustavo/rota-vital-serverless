@@ -1,0 +1,38 @@
+No current session found, using default AWS::AccountId
+Mounting HelloWorldFunction at http://127.0.0.1:3000/guias [POST]
+You can now browse to the above endpoints to invoke your functions. You do not need to restart/reload SAM CLI while working on your functions, changes will be reflected instantly/automatically. If you used sam build before running local commands, you will need to re-run sam build for the changes to be picked up. You only need to restart SAM CLI if you update your AWS SAM template
+2026-11-24 18:17:42 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:3000
+2026-11-24 18:17:42 [33mPress CTRL+C to quit[0m
+2026-11-24 18:17:42 127.0.0.1 - - [24/Nov/2026 18:17:42] "[31m[1mGET / HTTP/1.1[0m" 403 -
+Invoking app.lambda_handler (python3.12)
+Local image is up-to-date
+Using local image: public.ecr.aws/lambda/python:3.12-rapid-x86_64.
+
+Mounting C:\Users\gugav\Downloads\rota-vital-serverless\rota-vital-serverless\.aws-sam\build\HelloWorldFunction as /var/task:ro,delegated, inside runtime container
+SAM_CONTAINER_ID: fb580ee28f2b03ec84206797ea3ef025a144a2b46719f99ae03693adcd5dc415
+START RequestId: 842f312b-235e-4775-90f4-12a1200449b9 Version: $LATEST
+END RequestId: 842f312b-235e-4775-90f4-12a1200449b9
+REPORT RequestId: 842f312b-235e-4775-90f4-12a1200449b9	Init Duration: 0.04 ms	Duration: 111.86 ms	Billed Duration: 112 ms	Memory Size: 128 MB	Max Memory Used: 128 MB	
+
+2026-11-24 18:17:46 127.0.0.1 - - [24/Nov/2026 18:17:46] "[35m[1mPOST /guias HTTP/1.1[0m" 201 -
+Invoking app.lambda_handler (python3.12)
+Using local image: public.ecr.aws/lambda/python:3.12-rapid-x86_64.
+
+Mounting C:\Users\gugav\Downloads\rota-vital-serverless\rota-vital-serverless\.aws-sam\build\HelloWorldFunction as /var/task:ro,delegated, inside runtime container
+SAM_CONTAINER_ID: 244bdf6d08bcdb9d8c57d225a4fa9b73a22c2c6504b7c2c32efa0e5d25b9a2a6
+START RequestId: 54288fc3-fd17-4f34-88aa-75d773b0ffc7 Version: $LATEST
+END RequestId: 54288fc3-fd17-4f34-88aa-75d773b0ffc7
+REPORT RequestId: 54288fc3-fd17-4f34-88aa-75d773b0ffc7	Init Duration: 0.04 ms	Duration: 122.58 ms	Billed Duration: 123 ms	Memory Size: 128 MB	Max Memory Used: 128 MB	
+
+2026-11-24 18:17:49 127.0.0.1 - - [24/Nov/2026 18:17:49] "[35m[1mPOST /guias HTTP/1.1[0m" 201 -
+Invoking app.lambda_handler (python3.12)
+Using local image: public.ecr.aws/lambda/python:3.12-rapid-x86_64.
+
+Mounting C:\Users\gugav\Downloads\rota-vital-serverless\rota-vital-serverless\.aws-sam\build\HelloWorldFunction as /var/task:ro,delegated, inside runtime container
+SAM_CONTAINER_ID: f017b7dbae2b805856f945f31306908393eb05da526d68440bbeb0c9b4fd8571
+START RequestId: fae5e941-b0cf-4c98-9fd5-df198ef5d38c Version: $LATEST
+END RequestId: fae5e941-b0cf-4c98-9fd5-df198ef5d38c
+REPORT RequestId: fae5e941-b0cf-4c98-9fd5-df198ef5d38c	Init Duration: 0.05 ms	Duration: 119.79 ms	Billed Duration: 120 ms	Memory Size: 128 MB	Max Memory Used: 128 MB	
+
+2026-11-24 18:17:52 127.0.0.1 - - [24/Nov/2026 18:17:52] "[35m[1mPOST /guias HTTP/1.1[0m" 201 -

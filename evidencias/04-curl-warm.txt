@@ -1,0 +1,9 @@
+--- chamada 1 ---
+{"guia": "G-R-002", "hospital": "H-Caruaru", "bolsas": [], "invocacaoNesteAmbiente": 1}
+HTTP 201 em 4.742169s
+--- chamada 2 ---
+{"guia": "G-R-002", "hospital": "H-Caruaru", "bolsas": [], "invocacaoNesteAmbiente": 2}
+HTTP 201 em 1.097327s
+--- chamada 3 ---
+{"guia": "G-R-002", "hospital": "H-Caruaru", "bolsas": [], "invocacaoNesteAmbiente": 3}
+HTTP 201 em 1.109890s

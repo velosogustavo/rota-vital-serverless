@@ -1,0 +1,18 @@
+No current session found, using default AWS::AccountId
+Mounting HelloWorldFunction at http://127.0.0.1:3000/guias [POST]
+You can now browse to the above endpoints to invoke your functions. You do not need to restart/reload SAM CLI while working on your functions, changes will be reflected instantly/automatically. If you used sam build before running local commands, you will need to re-run sam build for the changes to be picked up. You only need to restart SAM CLI if you update your AWS SAM template
+2026-11-24 18:19:58 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:3000
+2026-11-24 18:19:58 [33mPress CTRL+C to quit[0m
+2026-11-24 18:19:58 127.0.0.1 - - [24/Nov/2026 18:19:58] "[31m[1mGET / HTTP/1.1[0m" 403 -
+Invoking app.lambda_handler (python3.12)
+Local image is up-to-date
+Using local image: public.ecr.aws/lambda/python:3.12-rapid-x86_64.
+
+Mounting C:\Users\gugav\Downloads\rota-vital-serverless\rota-vital-serverless\.aws-sam\build\HelloWorldFunction as /var/task:ro,delegated, inside runtime container
+SAM_CONTAINER_ID: 06fcea13d1433802b27b20d55460b2c3ab6d73f7ec7b2ebff582e434785aa3a6
+START RequestId: 65172a60-28bb-4588-bdcf-603f8011ae37 Version: $LATEST
+Function 'HelloWorldFunction' timed out after 3 seconds
+No response from invoke container for HelloWorldFunction
+Invalid lambda response received: Lambda response must be valid json
+2026-11-24 18:20:09 127.0.0.1 - - [24/Nov/2026 18:20:09] "[35m[1mPOST /guias HTTP/1.1[0m" 502 -

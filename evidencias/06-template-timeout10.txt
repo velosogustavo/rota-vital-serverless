@@ -1,0 +1,1 @@
+9:    Timeout: 10        # Passo 5: trocar para 10, rodar `sam build` e repetir

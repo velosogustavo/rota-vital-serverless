@@ -1,0 +1,34 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  rota-vital-serverless - função que gera a guia de transporte de uma
+  requisição do Rota Vital (Atividade individual 1 - Serverless).
+
+Globals:
+  Function:
+    Timeout: 3        # Passo 5: trocar para 10, rodar `sam build` e repetir
+    MemorySize: 128
+
+Resources:
+  HelloWorldFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: hello_world/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Architectures:
+        - x86_64
+      Events:
+        GerarGuia:
+          Type: Api
+          Properties:
+            Path: /guias
+            Method: post
+
+Outputs:
+  GuiasApi:
+    Description: URL da API (stage Prod) para POST /guias
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/guias/"
+  HelloWorldFunction:
+    Description: ARN da função
+    Value: !GetAtt HelloWorldFunction.Arn

@@ -1,0 +1,17 @@
+No current session found, using default AWS::AccountId
+Invoking app.lambda_handler (python3.12)
+Local image was not found.
+Removing rapid images for repo public.ecr.aws/sam/emulation-python3.12
+Building image...................................................................................................................................................................................................................................
+Using local image: public.ecr.aws/lambda/python:3.12-rapid-x86_64.
+
+Mounting C:\Users\gugav\Downloads\rota-vital-serverless\rota-vital-serverless\.aws-sam\build\HelloWorldFunction as /var/task:ro,delegated, inside runtime container
+SAM_CONTAINER_ID: 167d7dea1e7ccc5e82b1b469c7323714e79eb00360b76c668fcbb636238902d1
+START RequestId: bf08561f-ef87-4de9-b48d-9e0ba7fc070a Version: $LATEST
+END RequestId: bf08561f-ef87-4de9-b48d-9e0ba7fc070a
+REPORT RequestId: bf08561f-ef87-4de9-b48d-9e0ba7fc070a	Init Duration: 0.10 ms	Duration: 131.53 ms	Billed Duration: 132 ms	Memory Size: 128 MB	Max Memory Used: 128 MB	
+{"statusCode": 201, "headers": {"Content-Type": "application/json"}, "body": "{\"guia\": \"G-R-001\", \"hospital\": \"H-Recife\", \"bolsas\": [\"O-NEG-0142\"], \"invocacaoNesteAmbiente\": 1}"}
+
+real	0m50.913s
+user	0m0.000s
+sys	0m0.046s
