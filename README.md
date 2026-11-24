@@ -7,6 +7,8 @@ Função HTTP que recebe uma requisição de bolsas de sangue do Rota Vital (`PO
 
 **Caminho escolhido: A (AWS SAM CLI local).** Não precisa de conta AWS.
 
+**Repositório:** https://github.com/velosogustavo/rota-vital-serverless
+
 ## Estrutura
 
 ```
@@ -29,7 +31,7 @@ O evento gerado por `sam local generate-event` vem com o body em **base64** (`"i
 Pré-requisitos: Docker Desktop aberto e AWS SAM CLI (`sam --version`). No Windows, use Git Bash ou WSL.
 
 ```bash
-git clone <URL-DESTE-REPO> && cd rota-vital-serverless
+git clone https://github.com/velosogustavo/rota-vital-serverless.git && cd rota-vital-serverless
 python -m unittest discover tests -v      # opcional: testa o handler sem Docker
 ```
 
